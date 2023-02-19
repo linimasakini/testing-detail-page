@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-areas:
+    'judul judul judul'
+    'image image image'
+    'content content content'
+}
+
+@media screen and (min-width: 667px) {
+    .container {
+        grid-template-areas:
+        'judul judul judul'
+        'image content content'
+        'image description description'
+    }
+}
+
+.main {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-areas:
+    'makan minum info info'
+    }
+
+.item {
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.judul {
+    grid-area: judul;
+    background-color: lightblue;
+}
+.makanan{
+    grid-area: makan;
+    background-color: salmon;
+}
+.minuman {
+    grid-area: minum;
+    background-color: yellow;
+}
+
+.info{
+    grid-area: info;
+    background-color: lightblue;
+}
+
+.image {
+    grid-area: image;
+    background-color: salmon;
+}
+.description {
+    grid-area: description;
+    background-color: yellow;
+}
+.content {
+    grid-area: content;
+    background-color: lightskyblue;
+}
+
+.image img{
+    width: 100%;
+    max-width:  40rem;
+}
